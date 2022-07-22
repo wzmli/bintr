@@ -18,7 +18,7 @@ flexSim.Rout: flexSim.R
 testsim.Rout: testsim.R flexSim.rda
 	$(pipeR)
 
-## Make a binned example with logistic 
+## Make a binned deterministic example with logistic 
 example.Rout: example.R flexSim.rda
 	$(pipeR)
 

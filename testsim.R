@@ -38,4 +38,3 @@ simPlot <- (ggplot(df)
 print(simPlot)
 print(simPlot + scale_y_log10())
 
-

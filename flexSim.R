@@ -1,6 +1,5 @@
 library(dplyr)
 library(shellpipes)
-startGraphics()
 
 ## log K for estimation stability
 flexCum <- function(K, i0, r,t){
