@@ -10,20 +10,27 @@ vim_session:
 
 Sources += $(wildcard *.R)
 
-autopipeR = defined
-
-## test Sims
+## Functions
 flexSim.Rout: flexSim.R
 	$(pipeR)
 
-sim.Rout: sim.R flexSim.rda
+## Test the functiosn
+testsim.Rout: testsim.R flexSim.rda
 	$(pipeR)
 
+## Make a binned example with logistic 
 example.Rout: example.R flexSim.rda
 	$(pipeR)
 
+## Fit it perfectly!
 fit.Rout: fit.R example.rda flexSim.rda
 	$(pipeR)
+
+## Can we do some crude ts estimates with a lambda (discrete-time) paradigm?
+lambda.Rout: lambda.R example.rda flexSim.rda
+	$(pipeR)
+
+######################################################################
 
 ### Makestuff
 
